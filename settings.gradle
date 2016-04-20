@@ -4,7 +4,6 @@ include ':account-service'
 include ':auth-service'
 include ':config'
 include ':gateway'
-include ':mongodb'
 include ':monitoring'
 include ':notification-service'
 include ':registry'
@@ -14,7 +13,6 @@ project(':account-service').projectDir = "$rootDir/account-service" as File
 project(':auth-service').projectDir = "$rootDir/auth-service" as File
 project(':config').projectDir = "$rootDir/config" as File
 project(':gateway').projectDir = "$rootDir/gateway" as File
-project(':mongodb').projectDir = "$rootDir/mongodb" as File
 project(':monitoring').projectDir = "$rootDir/monitoring" as File
 project(':notification-service').projectDir = "$rootDir/notification-service" as File
 project(':registry').projectDir = "$rootDir/registry" as File
