@@ -91,59 +91,59 @@ services:
         max-size: "10m"
         max-file: "10"
 
-  statistics-service:
-    environment:
-      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
-      MONGODB_PASSWORD: $MONGODB_PASSWORD
-      STATISTICS_SERVICE_PASSWORD: $STATISTICS_SERVICE_PASSWORD
-    image: antowka/store-statistics-service
-    restart: always
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  statistics-service:
+#    environment:
+#      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
+#      MONGODB_PASSWORD: $MONGODB_PASSWORD
+#      STATISTICS_SERVICE_PASSWORD: $STATISTICS_SERVICE_PASSWORD
+#    image: antowka/store-statistics-service
+#    restart: always
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
 
-  statistics-mongodb:
-    environment:
-      MONGODB_PASSWORD: $MONGODB_PASSWORD
-    image: antowka/store-mongodb
-    restart: always
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  statistics-mongodb:
+#    environment:
+#      MONGODB_PASSWORD: $MONGODB_PASSWORD
+#    image: antowka/store-mongodb
+#    restart: always
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
 
-  notification-service:
-    environment:
-      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
-      MONGODB_PASSWORD: $MONGODB_PASSWORD
-      NOTIFICATION_SERVICE_PASSWORD: $NOTIFICATION_SERVICE_PASSWORD
-    image: antowka/store-notification-service
-    restart: always
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  notification-service:
+#    environment:
+#      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
+#      MONGODB_PASSWORD: $MONGODB_PASSWORD
+#      NOTIFICATION_SERVICE_PASSWORD: $NOTIFICATION_SERVICE_PASSWORD
+#    image: antowka/store-notification-service
+#    restart: always
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
 
-  notification-mongodb:
-    image: antowka/store-mongodb
-    restart: always
-    environment:
-      MONGODB_PASSWORD: $MONGODB_PASSWORD
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  notification-mongodb:
+#    image: antowka/store-mongodb
+#    restart: always
+#    environment:
+#      MONGODB_PASSWORD: $MONGODB_PASSWORD
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
 
-  monitoring:
-    environment:
-      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
-    image: antowka/store-monitoring
-    restart: always
-    ports:
-      - 9000:8080
-      - 8989:8989
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  monitoring:
+#    environment:
+#      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
+#    image: antowka/store-monitoring
+#    restart: always
+#    ports:
+#      - 9000:8080
+#      - 8989:8989
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
