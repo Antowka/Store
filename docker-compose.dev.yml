@@ -8,17 +8,25 @@ services:
     build: config
     ports:
       - 8888:8888
+    volumes:
+      - /tmp/store-log:/var/log/java
 
   registry:
     build: registry
+    volumes:
+      - /tmp/store-log:/var/log/java
 
   gateway:
     build: gateway
+    volumes:
+      - /tmp/store-log:/var/log/java
 
   auth-service:
     build: auth-service
     ports:
       - 5000:5000
+    volumes:
+      - /tmp/store-log:/var/log/java
 
   auth-mongodb:
     build: mongodb
@@ -29,8 +37,8 @@ services:
     build: account-service
     ports:
       - 6000:6000
-    volume:
-      - /tmp:/var/log/java
+    volumes:
+      - /tmp/store-log:/var/log/java
 
   account-mongodb:
     build: mongodb

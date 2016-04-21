@@ -13,3 +13,6 @@ server:
 security:
   user:
     password: ${CONFIG_SERVICE_PASSWORD}
+
+logging:
+    path: /var/log/java/config

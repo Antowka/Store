@@ -16,3 +16,6 @@ eureka:
     fetchRegistry: false
     server:
       waitTimeInMsWhenSyncEmpty: 0
+
+logging:
+    path: /var/log/java/registry
