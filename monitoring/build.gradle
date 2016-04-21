@@ -1,7 +1,16 @@
 jar {
 	baseName = 'monitoring'
-	version = '0.0.1-SNAPSHOT'
+	version = appVersion
 }
+
+task copyTask(type: Copy) {
+	from 'build/libs'
+	into 'target'
+	include '*.jar'
+	exclude { details -> details.file.name.endsWith('.jar') &&
+			details.file.text.contains('staging') }
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
